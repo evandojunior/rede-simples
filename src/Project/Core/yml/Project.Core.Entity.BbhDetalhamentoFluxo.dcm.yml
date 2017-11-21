@@ -1,0 +1,38 @@
+Project\Core\Entity\BbhDetalhamentoFluxo:
+    type: entity
+    table: bbh_detalhamento_fluxo
+    repositoryClass: Project\Core\Repository\BBHive\BbhDetalhamentoFluxoRepository
+    indexes:
+        bbh_det_flu_codigo_bbh_mod_flu_codigo:
+            columns:
+                - bbh_mod_flu_codigo
+    id:
+        bbhDetFluCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_det_flu_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhDetFluTabelaCriada:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '0'
+            column: bbh_det_flu_tabela_criada
+    manyToOne:
+        bbhModFluCodigo:
+            targetEntity: BbhModeloFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_mod_flu_codigo:
+                    referencedColumnName: bbh_mod_flu_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

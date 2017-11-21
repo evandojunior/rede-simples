@@ -1,0 +1,104 @@
+/*#menuVertical{
+	width:185px;
+}
+#menuVertical_menu{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:13px;
+}
+.liPadrao{
+	float:left;
+	list-style:none;
+	text-align:left;
+	width:185px;
+	height:24px;
+	background-image:url(/servicos/bbpass/images/menu/vi-normal.gif);
+}
+.liPadrao a:hover{
+	background-image:url(/servicos/bbpass/images/menu/vi-hover.gif);
+}
+.rodapeMenu{
+	float:left;
+	list-style:none;
+	text-align:left;
+	width:185px;
+	height:2px;
+	font-size:1px;
+	background-image:url(/servicos/bbpass/images/menu/bottom-edge-blue.gif);	
+}
+#cabecaMenu{
+	background-image:url(/servicos/bbpass/images/menu/head-products.gif);
+	background-repeat:no-repeat;
+	height:29px;
+	line-height:29px;
+	vertical-align:middle;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:14px;
+	color:#666;
+}
+
+.rodapeCompl{
+	float:left;
+	list-style:none;
+	text-align:left;
+	width:185px;
+	height:2px;
+	font-size:1px;
+	background-image:url(/servicos/bbpass/images/menu/bottom-compl.gif);
+}
+
+.li_a_padrao{
+	display:block;
+	height:24px;
+	padding:4px 0px 0px 18px;
+	color:#000000;
+	text-decoration:none;";
+}
+
+
+.li_a_padrao{
+	display:block;
+	text-decoration:none;";
+}*/
+.barra_ferramentas_esquerda{
+	border-top:1px solid #FFECC7;
+	border-bottom:1px solid #FFECC7;
+	border-left:1px solid #FFECC7;
+	background-color:#FFFBF4;
+}
+.barra_ferramentas_direita{
+	border-top:1px solid #FFECC7;
+	border-bottom:1px solid #FFECC7;
+	border-right:1px solid #FFECC7;
+	background-color:#FFFBF4;
+}
+.barra_ferramentas_esquerda_desativada{
+	border-top:1px solid #FFFFFF;
+	border-bottom:1px solid #FFFFFF;
+	border-left:1px solid #FFFFFF;
+	background-color:#FFFFFF;
+}
+.barra_ferramentas_direita_desativada{
+	border-top:1px solid #FFFFFF;
+	border-bottom:1px solid #FFFFFF;
+	border-right:1px solid #FFFFFF;
+	background-color:#FFFFFF;
+}
+a:link {
+	text-decoration: none;
+	color: #333333;
+}
+
+a:active {  
+	color: #000000; 
+	text-decoration: underline;
+}
+
+a:visited {  
+	color: #333333; 
+	text-decoration: none;
+}
+
+a:hover {  
+	color: #000000; 
+	text-decoration: none;
+}

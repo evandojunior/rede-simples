@@ -1,0 +1,106 @@
+Project\Core\Entity\BbhRelatorio:
+    type: entity
+    table: bbh_relatorio
+    indexes:
+        bbh_relatorio_bbh_ati_codigo:
+            columns:
+                - bbh_ati_codigo
+    id:
+        bbhRelCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_rel_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhRelDataCriacao:
+            type: date
+            nullable: true
+            column: bbh_rel_data_criacao
+        bbhRelArquivo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_rel_arquivo
+        bbhRelObservacao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_rel_observacao
+        bbhRelFinalizado:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '0'
+            column: bbh_rel_finalizado
+        bbhRelTitulo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_rel_titulo
+        bbhUsuCodigo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_usu_codigo
+        bbhRelPdf:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_rel_pdf
+        bbhRelAss:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_rel_ass
+        bbhRelNmarquivo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_rel_nmArquivo
+        bbhRelCaminho:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_rel_caminho
+        bbhRelProtegido:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_rel_protegido
+    manyToOne:
+        bbhAtiCodigo:
+            targetEntity: BbhAtividade
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_ati_codigo:
+                    referencedColumnName: bbh_ati_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

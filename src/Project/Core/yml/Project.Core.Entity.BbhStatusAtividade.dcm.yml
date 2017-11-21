@@ -1,0 +1,35 @@
+Project\Core\Entity\BbhStatusAtividade:
+    type: entity
+    table: bbh_status_atividade
+    id:
+        bbhStaAtiCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_sta_ati_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhStaAtiNome:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_sta_ati_nome
+        bbhStaAtiPeso:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_sta_ati_peso
+        bbhStaAtiObservacao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_sta_ati_observacao
+    lifecycleCallbacks: {  }

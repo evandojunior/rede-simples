@@ -1,0 +1,120 @@
+Project\Core\Entity\BbhFluxo:
+    type: entity
+    table: bbh_fluxo
+    indexes:
+        bbh_fluxo_bbh_modelo_fluxo:
+            columns:
+                - bbh_mod_flu_codigo
+        bbh_usu_codigo:
+            columns:
+                - bbh_usu_codigo
+        bbh_flu_codigobarras:
+            columns:
+                - bbh_flu_codigobarras
+    id:
+        bbhFluCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_flu_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhFluObservacao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_flu_observacao
+        bbhFluDataIniciado:
+            type: date
+            nullable: true
+            column: bbh_flu_data_iniciado
+        bbhFluTitulo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_flu_titulo
+        bbhFluTarefaPai:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_flu_tarefa_pai
+        bbhFluOculto:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_flu_oculto
+        bbhFluFinalizado:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_flu_finalizado
+        bbhFluAutonumeracao:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_flu_autonumeracao
+        bbhFluAnonumeracao:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_flu_anonumeracao
+        bbhFluCodigobarras:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: bbh_flu_codigobarras
+        bbhProtocoloReferencia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_protocolo_referencia
+    manyToOne:
+        bbhModFluCodigo:
+            targetEntity: BbhModeloFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_mod_flu_codigo:
+                    referencedColumnName: bbh_mod_flu_codigo
+            orphanRemoval: false
+        bbhUsuCodigo:
+            targetEntity: BbhUsuario
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_usu_codigo:
+                    referencedColumnName: bbh_usu_codigo
+            orphanRemoval: false
+    manyToMany:
+        bbhFluCodigoP:
+            targetEntity: BbhFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: bbhFluCodigoF
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

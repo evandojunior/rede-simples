@@ -1,0 +1,55 @@
+Project\Core\Entity\BbhServicos:
+    type: entity
+    table: bbh_servicos
+    indexes:
+        bbh_usu_codigo_tomador:
+            columns:
+                - bbh_usu_codigo_tomador
+        bbh_usu_codigo_prestador:
+            columns:
+                - bbh_usu_codigo_prestador
+        bbh_flu_codigo_ser:
+            columns:
+                - bbh_flu_codigo
+    id:
+        bbhSerCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_ser_codigo
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        bbhFluCodigo:
+            targetEntity: BbhFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_flu_codigo:
+                    referencedColumnName: bbh_flu_codigo
+            orphanRemoval: false
+        bbhUsuCodigoPrestador:
+            targetEntity: BbhUsuario
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_usu_codigo_prestador:
+                    referencedColumnName: bbh_usu_codigo
+            orphanRemoval: false
+        bbhUsuCodigoTomador:
+            targetEntity: BbhUsuario
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_usu_codigo_tomador:
+                    referencedColumnName: bbh_usu_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

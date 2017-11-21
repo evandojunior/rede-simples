@@ -1,0 +1,115 @@
+Project\Core\Entity\BbhIndicio:
+    type: entity
+    table: bbh_indicio
+    indexes:
+        fk_tipo:
+            columns:
+                - bbh_tip_codigo
+        fk_protocolo:
+            columns:
+                - bbh_pro_codigo
+    id:
+        bbhIndCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_ind_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhTipCodigo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_tip_codigo
+        bbhUsuCodigo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_usu_codigo
+        bbhIndCadastro:
+            type: datetime
+            nullable: true
+            column: bbh_ind_cadastro
+        bbhIndUnidade:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_ind_unidade
+        bbhIndTitulo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_ind_titulo
+        bbhIndReferencia:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_ind_referencia
+        bbhIndQuantidade:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_ind_quantidade
+        bbhIndValorUnitario:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: bbh_ind_valor_unitario
+        bbhIndValorTotal:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: bbh_ind_valor_total
+        bbhIndConfiabilidadeFonte:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+            column: bbh_ind_confiabilidade_fonte
+        bbhIndVeracidadeInformacao:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_ind_veracidade_informacao
+        bbhIndFonteInformacao:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_ind_fonte_informacao
+        bbhIndSigilo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '-1'
+            column: bbh_ind_sigilo
+    manyToOne:
+        bbhProCodigo:
+            targetEntity: BbhProtocolos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_pro_codigo:
+                    referencedColumnName: bbh_pro_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

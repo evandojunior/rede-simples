@@ -1,0 +1,5 @@
+# Bloqueia uma lista de IPs
+#Order Deny,Allow
+#Deny from all
+#Allow from 179.99.214.233
+#Allow from 187.22.17.77

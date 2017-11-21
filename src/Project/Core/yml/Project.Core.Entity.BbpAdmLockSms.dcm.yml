@@ -1,0 +1,55 @@
+Project\Core\Entity\BbpAdmLockSms:
+    type: entity
+    table: bbp_adm_lock_sms
+    id:
+        bbpAdmLockSmsCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbp_adm_lock_sms_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbpAdmLockSmsNome:
+            type: string
+            nullable: true
+            length: 105
+            options:
+                fixed: false
+            column: bbp_adm_lock_sms_nome
+        bbpAdmLockSmsEmail:
+            type: string
+            nullable: true
+            length: 75
+            options:
+                fixed: false
+            column: bbp_adm_lock_sms_email
+        bbpAdmLockSmsChave:
+            type: string
+            nullable: true
+            length: 8
+            options:
+                fixed: false
+                default: '0'
+            column: bbp_adm_lock_sms_chave
+        bbpAdmLockSmsCelular:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: bbp_adm_lock_sms_celular
+        bbpAdmLockSmsObservacao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbp_adm_lock_sms_observacao
+        bbpAdmLockSmsAcesso:
+            type: datetime
+            nullable: true
+            column: bbp_adm_lock_sms_acesso
+    lifecycleCallbacks: {  }

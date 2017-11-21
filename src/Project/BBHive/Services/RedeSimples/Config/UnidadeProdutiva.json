@@ -1,0 +1,24 @@
+{
+  "AUXILIAR": {
+    "1": "Sede",
+    "2": "Escritório Administrativo",
+    "3": "Depósito Fechado",
+    "4": "Almoxarifado",
+    "5": "Oficina de Reparação",
+    "6": "Garagem",
+    "7": "Unidade de Abastecimento de Combustíveis",
+    "8": "Ponto de Exposição",
+    "9": "Centro de Treinamento",
+    "10": "Centro de Processamento de Dados",
+    "11": "Posto de Coleta"
+  },
+  "PRODUTIVA": {
+    "1": "Estabelecimento fixo",
+    "2": "Internet",
+    "3": "Em local fixo fora de loja",
+    "4": "Correio",
+    "5": "Porta a Porta, Postos Móveis ou por Ambulantes",
+    "6": "Televendas",
+    "7": "Máquinas Automáticas"
+  }
+}

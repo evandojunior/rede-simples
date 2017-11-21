@@ -1,0 +1,134 @@
+Project\Core\Entity\BbhCampoIndicio:
+    type: entity
+    table: bbh_campo_indicio
+    id:
+        bbhCamIndCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_cam_ind_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhCamIndNome:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_ind_nome
+        bbhCamIndTitulo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_ind_titulo
+        bbhCamIndTipo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_ind_tipo
+        bbhCamIndCuringa:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_ind_curinga
+        bbhCamIndDescricao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_cam_ind_descricao
+        bbhCamIndTamanho:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_ind_tamanho
+        bbhCamIndDefault:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_cam_ind_default
+        bbhCamIndDisponivel:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: '1'
+            column: bbh_cam_ind_disponivel
+        bbhCamIndObrigatorio:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_cam_ind_obrigatorio
+        bbhCamIndMesmalinha:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_cam_ind_mesmaLinha
+        bbhCamIndVisivel:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: '1'
+            column: bbh_cam_ind_visivel
+        bbhCamIndLarguraTitulo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '100'
+            column: bbh_cam_ind_largura_titulo
+        bbhCamIndLarguraCampo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '100'
+            column: bbh_cam_ind_largura_campo
+        bbhCamIndOrdem:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '1'
+            column: bbh_cam_ind_ordem
+        bbhCamIndFixo:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_cam_ind_fixo
+    manyToMany:
+        bbhTipCodigo:
+            targetEntity: BbhTipoIndicio
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: bbhCamIndCodigo
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

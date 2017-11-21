@@ -1,0 +1,57 @@
+Project\Core\Entity\BbpAdmAutenticacao:
+    type: entity
+    table: bbp_adm_autenticacao
+    id:
+        bbpAdmAutCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbp_adm_aut_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbpAdmAutUsuario:
+            type: string
+            nullable: true
+            length: 75
+            options:
+                fixed: false
+            column: bbp_adm_aut_usuario
+        bbpAdmAutSenha:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: bbp_adm_aut_senha
+        bbpAdmAutIp:
+            type: string
+            nullable: true
+            length: 25
+            options:
+                fixed: false
+            column: bbp_adm_aut_ip
+        bbpAdmAcesso:
+            type: datetime
+            nullable: true
+            options:
+                default: '0000-00-00 00:00:00'
+            column: bbp_adm_acesso
+        bbpAdmNivel:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '774'
+            column: bbp_adm_nivel
+        bbpAdmUser:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbp_adm_user
+    lifecycleCallbacks: {  }

@@ -1,0 +1,1 @@
+<?php $titulo = "Rede Simples"; ?>

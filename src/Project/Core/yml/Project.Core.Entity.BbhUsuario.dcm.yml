@@ -1,0 +1,223 @@
+Project\Core\Entity\BbhUsuario:
+    type: entity
+    table: bbh_usuario
+    repositoryClass: Project\Core\Repository\BBHive\BbhUsuarioRepository
+    indexes:
+        bbh_dep_codigo:
+            columns:
+                - bbh_dep_codigo
+        bbh_usu_chefe:
+            columns:
+                - bbh_usu_chefe
+    id:
+        bbhUsuCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_usu_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhUsuIdentificacao:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_usu_identificacao
+        bbhUsuNome:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_usu_nome
+        bbhUsuApelido:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+                default: '584'
+            column: bbh_usu_apelido
+        bbhUsuDataNascimento:
+            type: date
+            nullable: true
+            column: bbh_usu_data_nascimento
+        bbhUsuSexo:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: false
+            column: bbh_usu_sexo
+        bbhUsuAtribuicao:
+            type: datetime
+            nullable: true
+            column: bbh_usu_atribuicao
+        bbhUsuRg:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: bbh_usu_rg
+        bbhUsuCpf:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: bbh_usu_cpf
+        bbhUsuCargo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_usu_cargo
+        bbhUsuPermissaoDep:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_usu_permissao_dep
+        bbhUsuTelComercial:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+            column: bbh_usu_tel_comercial
+        bbhUsuTelResidencial:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+            column: bbh_usu_tel_residencial
+        bbhUsuTelCelular:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+            column: bbh_usu_tel_celular
+        bbhUsuTelRecados:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+            column: bbh_usu_tel_recados
+        bbhUsuFax:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+            column: bbh_usu_fax
+        bbhUsuEmailAlternativo:
+            type: string
+            nullable: true
+            length: 80
+            options:
+                fixed: false
+            column: bbh_usu_email_alternativo
+        bbhUsuEndereco:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_usu_endereco
+        bbhUsuCidade:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+            column: bbh_usu_cidade
+        bbhUsuEstado:
+            type: string
+            nullable: true
+            length: 2
+            options:
+                fixed: false
+                default: SP
+            column: bbh_usu_estado
+        bbhUsuCep:
+            type: string
+            nullable: true
+            length: 9
+            options:
+                fixed: false
+            column: bbh_usu_cep
+        bbhUsuPais:
+            type: string
+            nullable: true
+            length: 80
+            options:
+                fixed: false
+                default: Brasil
+            column: bbh_usu_pais
+        bbhUsuUltimoacesso:
+            type: datetime
+            nullable: true
+            options:
+                default: '0000-00-00 00:00:00'
+            column: bbh_usu_ultimoAcesso
+        bbhUsuAtivo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '1'
+            column: bbh_usu_ativo
+        bbhUsuRestringirRecebSolicitacao:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_usu_restringir_receb_solicitacao
+        bbhUsuRestringirIniProcesso:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_usu_restringir_ini_processo
+        bbhUsuNivel:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '584'
+            column: bbh_usu_nivel
+    manyToOne:
+        bbhDepCodigo:
+            targetEntity: BbhDepartamento
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_dep_codigo:
+                    referencedColumnName: bbh_dep_codigo
+            orphanRemoval: false
+        bbhUsuChefe:
+            targetEntity: BbhUsuario
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_usu_chefe:
+                    referencedColumnName: bbh_usu_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,42 @@
+Project\Core\Entity\BbhPermissaoFluxo:
+    type: entity
+    table: bbh_permissao_fluxo
+    indexes:
+        bbh_permissao_fluxo_bbh_modelo_fluxo:
+            columns:
+                - bbh_mod_flu_codigo
+        bbh_permissao_fluxo_bbh_perfil:
+            columns:
+                - bbh_per_codigo
+    id:
+        bbhPerFluCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_per_flu_codigo
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        bbhModFluCodigo:
+            targetEntity: BbhModeloFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_mod_flu_codigo:
+                    referencedColumnName: bbh_mod_flu_codigo
+            orphanRemoval: false
+        bbhPerCodigo:
+            targetEntity: BbhPerfil
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_per_codigo:
+                    referencedColumnName: bbh_per_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

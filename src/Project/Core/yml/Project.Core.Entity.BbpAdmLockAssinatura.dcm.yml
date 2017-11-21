@@ -1,0 +1,57 @@
+Project\Core\Entity\BbpAdmLockAssinatura:
+    type: entity
+    table: bbp_adm_lock_assinatura
+    uniqueConstraints:
+        bbp_adm_lock_ass_email:
+            columns:
+                - bbp_adm_lock_ass_email
+        bbp_adm_lock_ass_cpf:
+            columns:
+                - bbp_adm_lock_ass_cpf
+    id:
+        bbpAdmLockAssCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbp_adm_lock_ass_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbpAdmLockAssNome:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: bbp_adm_lock_ass_nome
+        bbpAdmLockAssEmail:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+                default: ''
+            column: bbp_adm_lock_ass_email
+        bbpAdmLockAssCpf:
+            type: bigint
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: bbp_adm_lock_ass_cpf
+        bbpAdmLockAssAcesso:
+            type: datetime
+            nullable: true
+            options:
+                default: '0000-00-00 00:00:00'
+            column: bbp_adm_lock_ass_acesso
+        bbpAdmLockAssObs:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbp_adm_lock_ass_obs
+    lifecycleCallbacks: {  }

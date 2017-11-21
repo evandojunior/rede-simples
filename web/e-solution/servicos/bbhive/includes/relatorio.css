@@ -1,0 +1,143 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.back_Campos{
+	background-color:#FAFAFA; 
+	border-color: #D0D5DA; 
+	border-style: solid; 
+	border-width : 1px; 
+	font-size: 11px; 
+	color:#003366; 
+	font-family: Verdana;
+	cursor:text;
+}
+.verdana_12 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	text-decoration: none;
+}
+.verdana_11 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	text-decoration: none; 
+	letter-spacing: -1px;
+}
+
+.verdana_11_bold { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	text-decoration: none; 
+	letter-spacing: -1px;
+	font-weight:bold;
+}
+
+.verdana_11_vermelho { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	text-decoration: none; 
+	letter-spacing: -1px;
+	color:#FF0000;
+}
+.verdana_11_cinza { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	text-decoration: none; 
+	letter-spacing: -1px;
+	color:#999999;
+}
+.verdana_11_cinza_escuro { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	text-decoration: none; 
+	letter-spacing: -1px;
+	color:#3F3F3F;
+}
+a:link {
+	text-decoration: none;
+	color: #333333;
+}
+
+a:active {  
+	color: #000000; 
+	text-decoration: underline;
+}
+
+a:visited {  
+	color: #333333; 
+	text-decoration: none;
+}
+
+a:hover {  
+	color: #000000; 
+	text-decoration: none;
+}
+.comFundoRel{
+	background-image: url(/corporativo/servicos/bbhive/images/painel/backAnexo.jpg);
+	background-position:center;
+	cursor:pointer;
+}
+.semFundoRel{
+	background-image:none;
+}
+.legandaLabel{
+	font-family:Tahoma;
+	font-size:10px;
+	letter-spacing:0.05em;
+	color:#5A5A5A;
+}
+.legandaLabel11{
+	font-family:Tahoma;
+	font-size:11px;
+	letter-spacing:0.05em;
+	color:#5A5A5A;
+}
+.legandaLabel12{
+	font-family:Tahoma;
+	font-size:12px;
+	letter-spacing:0.05em;
+	color:#5A5A5A;
+}
+.legandaLabel14{
+	font-family:Tahoma;
+	font-size:14px;
+	letter-spacing:0.05em;
+	color:#5A5A5A;
+}
+.legandaLabel11{
+	font-family:Tahoma;
+	font-size:11px;
+	letter-spacing:0.05em;
+	color:#5A5A5A;
+}
+.legandaLabel16{
+	font-family:Tahoma;
+	font-size:16px;
+	letter-spacing:0.05em;
+	color:#5A5A5A;
+}
+.back_input{
+	background-color:#FAFAFA; 
+	border-color: #D0D5DA; 
+	border-style: solid; 
+	border-width : 1px; 
+	font-size: 12px; 
+	color:#003366; 
+	font-family: Verdana;
+
+}
+.titulo_setor {  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 11px; text-decoration: none; 
+	letter-spacing: normal; 
+	/*cursor: hand; */
+	border-color: black black #003399 #003399; 
+	border-style: solid; 
+	border-top-width: 0px; 
+	border-right-width: 0px; 
+	border-bottom-width: 1px; 
+	border-left-width: 0px; 
+	font-weight: bold;
+}

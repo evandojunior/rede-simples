@@ -1,0 +1,58 @@
+Project\Core\Entity\BbpAdmLock:
+    type: entity
+    table: bbp_adm_lock
+    id:
+        bbpAdmLocCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbp_adm_loc_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbpAdmLocNome:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: bbp_adm_loc_nome
+        bbpAdmLocArquivo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbp_adm_loc_arquivo
+        bbpAdmLocObservacao:
+            type: blob
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbp_adm_loc_observacao
+        bbpAdmLocDiretorio:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: bbp_adm_loc_diretorio
+        bbpAdmLocAtivo:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '1'
+            column: bbp_adm_loc_ativo
+        bbpAdmLocIcone:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbp_adm_loc_icone
+    lifecycleCallbacks: {  }

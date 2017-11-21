@@ -1,0 +1,57 @@
+Project\Core\Entity\BbhAdministrativo:
+    type: entity
+    table: bbh_administrativo
+    id:
+        bbhAdmCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_adm_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhAdmIdentificacao:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_adm_identificacao
+        bbhAdmNome:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_adm_nome
+        bbhAdmDataNascimento:
+            type: date
+            nullable: true
+            column: bbh_adm_data_nascimento
+        bbhAdmSexo:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: false
+            column: bbh_adm_sexo
+        bbhAdmUltimoacesso:
+            type: datetime
+            nullable: true
+            column: bbh_adm_ultimoAcesso
+        bbhAdmAtivo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_adm_ativo
+        bbhAdmNivel:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '484'
+            column: bbh_adm_nivel
+    lifecycleCallbacks: {  }

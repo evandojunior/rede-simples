@@ -1,0 +1,30 @@
+Project\Core\Entity\BbhDetalhamentoProtocolo:
+    type: entity
+    table: bbh_detalhamento_protocolo
+    repositoryClass: Project\Core\Repository\BBHive\BbhDetalhamentoProtocoloRepository
+    indexes:
+        fk_bbh_pro_codigo:
+            columns:
+                - bbh_pro_codigo
+    id:
+        bbhDetProCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_det_pro_codigo
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        bbhProCodigo:
+            targetEntity: BbhProtocolos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_pro_codigo:
+                    referencedColumnName: bbh_pro_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

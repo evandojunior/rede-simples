@@ -1,0 +1,147 @@
+Project\Core\Entity\BbhPerfil:
+    type: entity
+    table: bbh_perfil
+    id:
+        bbhPerCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_per_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhPerNome:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_per_nome
+        bbhPerObservacao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_per_observacao
+        bbhPerFluxo:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: false
+                default: '0'
+            column: bbh_per_fluxo
+        bbhPerMensagem:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: false
+                default: '0'
+            column: bbh_per_mensagem
+        bbhPerArquivos:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: false
+                default: '0'
+            column: bbh_per_arquivos
+        bbhPerEquipe:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: false
+                default: '0'
+            column: bbh_per_equipe
+        bbhPerTarefas:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: false
+                default: '0'
+            column: bbh_per_tarefas
+        bbhPerRelatorios:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: false
+                default: '0'
+            column: bbh_per_relatorios
+        bbhPerProtocolos:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: false
+                default: '0'
+            column: bbh_per_protocolos
+        bbhPerCentralIndicios:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_per_central_indicios
+        bbhPerBi:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_per_bi
+        bbhPerGeo:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_per_geo
+        bbhPerPeoplerank:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_per_peoplerank
+        bbhPerCorp:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_per_corp
+        bbhPerPub:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_per_pub
+        bbhPerMatriz:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '0'
+            column: bbh_per_matriz
+        bbhPerUnidade:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '0'
+            column: bbh_per_unidade
+    lifecycleCallbacks: {  }

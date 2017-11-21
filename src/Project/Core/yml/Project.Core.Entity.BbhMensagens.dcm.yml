@@ -1,0 +1,88 @@
+Project\Core\Entity\BbhMensagens:
+    type: entity
+    table: bbh_mensagens
+    indexes:
+        bbh_usu_codigo_remet:
+            columns:
+                - bbh_usu_codigo_remet
+        bbh_usu_codigo_destin:
+            columns:
+                - bbh_usu_codigo_destin
+        bbh_flu_codigo:
+            columns:
+                - bbh_flu_codigo
+    id:
+        bbhMenCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_men_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhMenDataRecebida:
+            type: datetime
+            nullable: true
+            column: bbh_men_data_recebida
+        bbhMenDataLeitura:
+            type: datetime
+            nullable: true
+            column: bbh_men_data_leitura
+        bbhMenAssunto:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_men_assunto
+        bbhMenMensagem:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_men_mensagem
+        bbhFluCodigo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_flu_codigo
+        bbhMenExclusaoRemetente:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '0'
+            column: bbh_men_exclusao_remetente
+        bbhMenExclusaoDestinatario:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '0'
+            column: bbh_men_exclusao_destinatario
+    manyToOne:
+        bbhUsuCodigoDestin:
+            targetEntity: BbhUsuario
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_usu_codigo_destin:
+                    referencedColumnName: bbh_usu_codigo
+            orphanRemoval: false
+        bbhUsuCodigoRemet:
+            targetEntity: BbhUsuario
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_usu_codigo_remet:
+                    referencedColumnName: bbh_usu_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

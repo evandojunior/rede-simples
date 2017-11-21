@@ -1,0 +1,57 @@
+Project\Core\Entity\BbhSetup:
+    type: entity
+    table: bbh_setup
+    id:
+        bbhSetCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_set_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhSetEmailOrigem:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_set_email_origem
+        bbhSetTituloOrigem:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_set_titulo_origem
+        bbhSetAssunto:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_set_assunto
+        bbhSetUsuario:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_set_usuario
+        bbhSetSenha:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_set_senha
+        bbhSetSmtp:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_set_smtp
+    lifecycleCallbacks: {  }

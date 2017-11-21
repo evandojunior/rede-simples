@@ -1,0 +1,131 @@
+Project\Core\Entity\BbhArquivo:
+    type: entity
+    table: bbh_arquivo
+    indexes:
+        bbh_arquivo_bbh_fluxo:
+            columns:
+                - bbh_flu_codigo
+        bbh_usu_arquivo_bbh_usu_codigo:
+            columns:
+                - bbh_usu_codigo
+    id:
+        bbhArqCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_arq_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhArqLocalizacao:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_arq_localizacao
+        bbhArqDataModificado:
+            type: datetime
+            nullable: true
+            column: bbh_arq_data_modificado
+        bbhArqVersao:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_arq_versao
+        bbhArqCompartilhado:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '0'
+            column: bbh_arq_compartilhado
+        bbhArqNome:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_arq_nome
+        bbhArqTipo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_arq_tipo
+        bbhArqTitulo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_arq_titulo
+        bbhArqAutor:
+            type: string
+            nullable: true
+            length: 180
+            options:
+                fixed: false
+            column: bbh_arq_autor
+        bbhArqDescricao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_arq_descricao
+        bbhArqNomeLogico:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_arq_nome_logico
+        bbhArqMime:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+            column: bbh_arq_mime
+        bbhArqPublico:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_arq_publico
+        bbhArqObsPublico:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_arq_obs_publico
+    manyToOne:
+        bbhFluCodigo:
+            targetEntity: BbhFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_flu_codigo:
+                    referencedColumnName: bbh_flu_codigo
+            orphanRemoval: false
+        bbhUsuCodigo:
+            targetEntity: BbhUsuario
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_usu_codigo:
+                    referencedColumnName: bbh_usu_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

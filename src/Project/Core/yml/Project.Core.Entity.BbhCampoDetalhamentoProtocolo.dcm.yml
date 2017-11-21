@@ -1,0 +1,110 @@
+Project\Core\Entity\BbhCampoDetalhamentoProtocolo:
+    type: entity
+    table: bbh_campo_detalhamento_protocolo
+    repositoryClass: Project\Core\Repository\BBHive\BbhCampoDetalhamentoProtocoloRepository
+    id:
+        bbhCamDetProCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_cam_det_pro_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhCamDetProNome:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_det_pro_nome
+        bbhCamDetProTitulo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_det_pro_titulo
+        bbhCamDetProTipo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_det_pro_tipo
+        bbhCamDetProCuringa:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_det_pro_curinga
+        bbhCamDetProDescricao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_cam_det_pro_descricao
+        bbhCamDetProTamanho:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_det_pro_tamanho
+        bbhCamDetProDefault:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_cam_det_pro_default
+        bbhCamDetProDisponivel:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: '1'
+            column: bbh_cam_det_pro_disponivel
+        bbhCamDetProObrigatorio:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_cam_det_pro_obrigatorio
+        bbhCamDetProVisivel:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: '1'
+            column: bbh_cam_det_pro_visivel
+        bbhCamDetProOrdem:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '1'
+            column: bbh_cam_det_pro_ordem
+        bbhCamDetProFixo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: bbh_cam_det_pro_fixo
+        bbhCamDetProPreencherAposReceber:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: bbh_cam_det_pro_preencher_apos_receber
+    lifecycleCallbacks: {  }

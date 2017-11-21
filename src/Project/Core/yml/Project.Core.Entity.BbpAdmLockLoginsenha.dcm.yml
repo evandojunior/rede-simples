@@ -1,0 +1,89 @@
+Project\Core\Entity\BbpAdmLockLoginsenha:
+    type: entity
+    table: bbp_adm_lock_loginsenha
+    indexes:
+        bbp_adm_lock_log_email:
+            columns:
+                - bbp_adm_lock_log_email
+    id:
+        bbpAdmLockLogCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbp_adm_lock_log_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbpAdmLockLogNome:
+            type: string
+            nullable: true
+            length: 75
+            options:
+                fixed: false
+            column: bbp_adm_lock_log_nome
+        bbpAdmLockLogEmail:
+            type: string
+            nullable: false
+            length: 75
+            options:
+                fixed: false
+                default: ''
+            column: bbp_adm_lock_log_email
+        bbpAdmLockLogSenha:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: ''
+            column: bbp_adm_lock_log_senha
+        bbpAdmLockLogNasc:
+            type: date
+            nullable: true
+            column: bbp_adm_lock_log_nasc
+        bbpAdmLockLogCargo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbp_adm_lock_log_cargo
+        bbhAdmLockLogNivel:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '784'
+            column: bbh_adm_lock_log_nivel
+        bbhAdmLockLogSexo:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: m
+            column: bbh_adm_lock_log_sexo
+        bbpAdmLockLogAcesso:
+            type: datetime
+            nullable: true
+            options:
+                default: '0000-00-00 00:00:00'
+            column: bbp_adm_lock_log_acesso
+        bbpAdmLockLogObs:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbp_adm_lock_log_obs
+        bbpAdmLockLogAtivo:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '1'
+            column: bbp_adm_lock_log_ativo
+    lifecycleCallbacks: {  }

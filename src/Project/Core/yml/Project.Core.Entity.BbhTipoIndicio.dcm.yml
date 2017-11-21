@@ -1,0 +1,76 @@
+Project\Core\Entity\BbhTipoIndicio:
+    type: entity
+    table: bbh_tipo_indicio
+    indexes:
+        ind_bbh_dep_codigo:
+            columns:
+                - bbh_dep_codigo
+    id:
+        bbhTipCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_tip_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhTipNome:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_tip_nome
+        bbhTipDescricao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_tip_descricao
+        bbhTipAtivo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '1'
+            column: bbh_tip_ativo
+        bbhTipoCorp:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '1'
+            column: bbh_tipo_corp
+    manyToOne:
+        bbhDepCodigo:
+            targetEntity: BbhDepartamento
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_dep_codigo:
+                    referencedColumnName: bbh_dep_codigo
+            orphanRemoval: false
+    manyToMany:
+        bbhCamIndCodigo:
+            targetEntity: BbhCampoIndicio
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: bbhTipCodigo
+            joinTable:
+                name: bbh_campo_tipo_indicio
+                joinColumns:
+                    -
+                        name: bbh_tip_codigo
+                        referencedColumnName: bbh_tip_codigo
+                inverseJoinColumns:
+                    -
+                        name: bbh_cam_ind_codigo
+                        referencedColumnName: bbh_cam_ind_codigo
+            orderBy: null
+    lifecycleCallbacks: {  }

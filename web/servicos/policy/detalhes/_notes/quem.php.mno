@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_quem" value="name:momento;datatype:string,name:pol_aud_usuario;datatype:string,name:acessos;datatype:int,name:pol_apl_nome;datatype:string" />
+</info>

@@ -1,0 +1,1 @@
+<var style="display:none">MM_openBrWindow('/servicos/bbhive/protocolos/imprime/imprimir.php?consulta=true','Imagem','toolbar=yes,scrollbars=yes,resizable=yes');LoadSimultaneo('protocolos/cadastro/passo2.php','conteudoGeral');</var>

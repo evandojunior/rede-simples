@@ -1,0 +1,167 @@
+body {
+	background: URL('/datafiles/servicos/bbpass/images/sistema/servicos/background.jpg') fixed no-repeat center bottom;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+#logo{
+	background-image: URL('/datafiles/servicos/bbpass/images/sistema/e-solution/cabecalho.jpg');
+	background-repeat:no-repeat;
+	background-position:center;
+	height:125px;
+	border:#FFF solid 1px;
+}
+
+#login_cabeca{
+	background-image: URL('/datafiles/servicos/bbpass/images/sistema/e-solution/cabecalho_login.jpg');
+	background-repeat:no-repeat;
+	background-position:center;
+	height:89px;
+	border:#FFF solid 1px;	
+}
+.legendaLabel11{
+	font-family:Tahoma;
+	font-size:11px;
+	letter-spacing:0.05em;
+	color:#5A5A5A;
+}
+
+.legendaLabel12{
+	font-family:Tahoma;
+	font-size:12px;
+	letter-spacing:0.05em;
+	color:#5A5A5A;
+}
+
+.legendaLabel13{
+	font-family:Tahoma;
+	font-size:13px;
+	letter-spacing:0.05em;
+	color:#5A5A5A;
+}
+
+.legendaLabel14{
+	font-family:Tahoma;
+	font-size:14px;
+	letter-spacing:0.05em;
+	color:#5A5A5A;
+}
+.verdana_11 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	text-decoration: none;
+}
+.verdana_12 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	text-decoration: none;
+}
+
+.verdana_13 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 13px; 
+	text-decoration: none;
+}
+.back_input{
+	background-color:#FAFAFA; 
+	border-color: #D0D5DA; 
+	border-style: solid; 
+	border-width : 1px; 
+	font-size: 12px; 
+	color:#003366; 
+	font-family: Verdana;
+
+}
+
+.back_Campos{
+	background-color:#FAFAFA; 
+	border-color: #D0D5DA; 
+	border-style: solid; 
+	border-width : 1px; 
+	font-size: 11px; 
+	color:#003366; 
+	font-family: Verdana;
+	cursor:text;
+	height:18px;
+	line-height:18px;
+	vertical-align:middle;
+}
+
+#div_fixa {
+    width: 305px;
+    text-align: left;
+    margin: 0 auto;
+    position: fixed;
+    position: absolute;
+	bottom: 1px;
+	left:1px;
+    background-color: #EDDD92;
+	color:#666;
+	font-family:Tahoma;
+	font-size:13px;
+	height:22px;
+	line-height:22px;
+	vertical-align:middle;
+}
+
+.fonteDestaque{
+	font-family:arial;text-align:left;padding:5 0; margin-top:10px;	
+}
+
+.barra_ativada{
+	border-top:1px solid #FFECC7;
+	border-bottom:1px solid #FFECC7;
+	border-left:1px solid #FFECC7;
+	background-color:#FFFBF4;
+	border:#FC0 solid 1px;
+	cursor:pointer;
+}
+
+.barra_desativada{
+	border-top:1px solid #FFFFFF;
+	border-bottom:1px solid #FFFFFF;
+	border-right:1px solid #FFFFFF;
+	background-color:#FFFFFF;
+	cursor:pointer;
+}
+
+.formulario2 {font-family: Verdana;
+	font-size: 10px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #B4C2CB;
+	overflow: auto;
+	scrollbar-face-color: #B4C2CB;
+	scrollbar-highlight-color:#FFFFFF;
+	scrollbar-3dlight-color:#FFFFFF;
+	scrollbar-darkshadow-color:#FFFFFF;
+	scrollbar-shadow-color:#FFFFFF;
+	scrollbar-arrow-color:#FFFFFF;
+	scrollbar-track-color:#FFFFFF;
+}
+
+.botaoAvancar{
+	background:url(/e-solution/servicos/bbpass/images/salvar.gif);background-repeat:no-repeat;background-position:left;height:23px;width:170px;margin-right:5px; cursor:pointer;color:#06F
+}
+.botaoVoltar{
+	background:url(/e-solution/servicos/bbpass/images/cancelar.gif);background-repeat:no-repeat;background-position:left;height:23px;width:170px;margin-right:5px; cursor:pointer;color:#06F
+}
+.botao_calendar{
+	background:url(/e-solution/servicos/bbpass/images/calendario/calendar.gif);
+	background-repeat:no-repeat;
+	background-position:bottom;
+	cursor:pointer;
+	margin-left:-5px;
+	border:0;
+}
+.cantoEsquerdo{
+	background:url(/e-solution/servicos/bbpass/images/canto_esquerdo.gif);
+}
+.cantoDireito{
+	background:url(/e-solution/servicos/bbpass/images/canto_direito.gif);
+}
+.fundoTitulo{
+	background:url(/e-solution/servicos/bbpass/images/back_titulo.jpg);
+}

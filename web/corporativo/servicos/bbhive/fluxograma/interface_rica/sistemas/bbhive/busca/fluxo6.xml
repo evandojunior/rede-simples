@@ -1,0 +1,42 @@
+<fluxo id="15" nome="1º Teste" totNohs="10">
+ 	<atividade id="1" nome="Atividade Inicial" status="engrenagem.swf" icone="mc_1.swf" data="25/01/2009" cor="0x000000">
+    	<premissas>
+        </premissas>
+        
+        <alternativas>
+        </alternativas>
+    </atividade>
+	 
+
+    <atividade id="2" nome="Atividade 1" status="engrenagem.swf" icone="mc_3.swf" data="26/02/2009" cor="0x000000">
+    	<premissas>
+        </premissas>
+        
+        <alternativas>
+			<fluxo id="20" nome="Fluxo 01" alternativa="32" cor="0x66CC00" icone="mc_vazio.swf" status="sub_fluxo.swf" pai="Atividade1" />
+			<fluxo id="21" nome="Fluxo 02" alternativa="28" cor="0x66CC00" icone="mc_vazio.swf" status="sub_fluxo.swf" pai="Atividade1" />
+        </alternativas>
+    </atividade>
+    
+    <atividade id="3" nome="Atividade 2" status="bomba.swf" icone="mc_3.swf" data="27/03/2009" cor="0xFF0000">
+    	
+		<premissas>
+			<atividade id="2" /> 
+        </premissas>
+       
+        <alternativas>
+			<fluxo id="22" nome="Fluxo 04" alternativa="32" cor="0x66CC00" icone="mc_vazio.swf" status="sub_fluxo.swf" pai="Atividade2" />
+			<fluxo id="23" nome="Fluxo 05" alternativa="28" cor="0x66CC00" icone="mc_vazio.swf" status="sub_fluxo.swf" pai="Atividade2" />
+			<fluxo id="24" nome="Fluxo 06" alternativa="29" cor="0x66CC00" icone="mc_vazio.swf" status="sub_fluxo.swf" pai="Atividade2" />
+
+        </alternativas>
+    </atividade>
+    
+ 	<atividade id="4" nome="Atividade Final" status="engrenagem.swf" icone="mc_1.swf" data="28/04/2009" cor="0x000000">
+    	<premissas>
+        </premissas>
+        
+        <alternativas>
+        </alternativas>
+    </atividade>
+ </fluxo>

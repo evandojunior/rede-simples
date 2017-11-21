@@ -1,0 +1,40 @@
+{
+    "name"        : "Longevo-Workflow",
+    "type"        : "library",
+    "description" : "A Silex Edition. This project is a base for your silex applications.",
+    "keywords"    : ["framework"],
+    "homepage"    : "http://www.longevo.com.br/",
+    "license"     : "MIT",
+    "authors"     : [
+        {
+            "name"  : "Robson Cruz/Zechim",
+            "email" : "rcruz@longevo.com.br"
+        }
+    ],
+    "require": {
+        "silex/silex": "~1.1",
+        "symfony/security": "~2.1",
+        "symfony/console": "~2.5",
+        "symfony/translation"   : "~2.3",
+        "monolog/monolog": "^1.22",
+        "symfony/validator": "^3.2",
+        "symfony/form": "^3.2",
+        "silex/web-profiler": "~1.0.1",
+        "symfony/yaml": "2.*",
+        "twig/twig": "^1.10",
+        "doctrine/dbal": ">=2.2.0,<2.4.0-dev",
+        "doctrine/orm": "2.3.*@dev",
+        "respect/validation": "^1.1",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "symfony/browser-kit"   : "~2.3",
+        "symfony/css-selector"  : "~2.3",
+        "symfony/dom-crawler"   : "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Project\\": "src/Project"
+        }
+    }
+}

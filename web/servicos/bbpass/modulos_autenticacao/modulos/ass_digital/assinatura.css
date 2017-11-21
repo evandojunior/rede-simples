@@ -1,0 +1,35 @@
+<!--
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+body {
+	background-color: #FFF;
+}
+.button {
+	border: 1px #333333 solid;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	letter-spacing: normal;
+	text-decoration: none;
+	margin-top: 1px;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	margin-left: 1px;
+	line-height: normal;
+	list-style-type: lower-alpha;
+}
+.verdana_12{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
+.aviso{
+	color:#06F;	
+}
+.erro{
+	color:#F00;	
+}
+-->

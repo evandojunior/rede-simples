@@ -1,0 +1,141 @@
+Project\Core\Entity\BbhProtocolos:
+    type: entity
+    table: bbh_protocolos
+    repositoryClass: Project\Core\Repository\BBHive\BbhProtocolosRepository
+    indexes:
+        bbh_flu_codigoP:
+            columns:
+                - bbh_flu_codigo
+        dep_codigo:
+            columns:
+                - bbh_dep_codigo
+    id:
+        bbhProCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_pro_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhProTitulo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_pro_titulo
+        bbhProDescricao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_pro_descricao
+        bbhProObs:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_pro_obs
+        bbhProMomento:
+            type: datetime
+            nullable: true
+            options:
+                default: '0000-00-00 00:00:00'
+            column: bbh_pro_momento
+        bbhProIdentificacao:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: bbh_pro_identificacao
+        bbhProEmail:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: bbh_pro_email
+        bbhProSenha:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: bbh_pro_senha
+        bbhProStatus:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+            column: bbh_pro_status
+        bbhProData:
+            type: date
+            nullable: true
+            column: bbh_pro_data
+        bbhProRecebido:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_pro_recebido
+        bbhProDtRecebido:
+            type: datetime
+            nullable: true
+            column: bbh_pro_dt_recebido
+        bbhProFlagrante:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_pro_flagrante
+        bbhProAutoridade:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_pro_autoridade
+        bbhFluPai:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_flu_pai
+        bbhUsuCodigo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_usu_codigo
+    manyToOne:
+        bbhFluCodigo:
+            targetEntity: BbhFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_flu_codigo:
+                    referencedColumnName: bbh_flu_codigo
+            orphanRemoval: false
+        bbhDepCodigo:
+            targetEntity: BbhDepartamento
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_dep_codigo:
+                    referencedColumnName: bbh_dep_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

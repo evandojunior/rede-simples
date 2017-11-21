@@ -1,0 +1,50 @@
+Project\Core\Entity\BbhDependencia:
+    type: entity
+    table: bbh_dependencia
+    indexes:
+        bbh_modelo_atividade_predecessora:
+            columns:
+                - bbh_modelo_atividade_predecessora
+        bbh_modelo_atividade_sucessora:
+            columns:
+                - bbh_modelo_atividade_sucessora
+    id:
+        bbhPreModAtiCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_pre_mod_ati_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhPreModAtiObservacao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_pre_mod_ati_observacao
+    manyToOne:
+        bbhModeloAtividadePredecessora:
+            targetEntity: BbhModeloAtividade
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_modelo_atividade_predecessora:
+                    referencedColumnName: bbh_mod_ati_codigo
+            orphanRemoval: false
+        bbhModeloAtividadeSucessora:
+            targetEntity: BbhModeloAtividade
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_modelo_atividade_sucessora:
+                    referencedColumnName: bbh_mod_ati_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

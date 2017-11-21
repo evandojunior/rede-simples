@@ -1,0 +1,93 @@
+<style type="text/css">
+.verdana_11 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	text-decoration: none; 
+	letter-spacing: -1px;
+}
+.verdana_12 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	text-decoration: none;
+}
+.borderAll {  
+	border: 1px #003399 solid;
+}
+
+.borderAlljanela {  
+	border-color: #E1E1E1 #333333 #333333 #E1E1E1; 
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px;
+}
+</style>
+<table width="777" border="0" align="center" cellpadding="0" cellspacing="0" class="verdana_12">
+  <tr>
+    <td height="25">Ol&aacute; @fulano, existe(m) atividade(s) pendentes.</td>
+  </tr>
+  <tr>
+    <td height="25">&nbsp;</td>
+  </tr>
+</table>
+<br>
+<table width="777" border="0" align="center" cellpadding="0" cellspacing="1" class="verdana_11" bgcolor="#E6E6E6">
+    
+      <tr>
+        	<td width="54%" height="30" bgcolor="#D0D0D0" align="left"  <?php echo $colspan; ?>><strong><?php echo $_SESSION['TarefasNome']; ?><label><?php echo $textoPadrao; ?></label></strong></td>
+            <?php if(!isset($naoMostra)) {?>
+        	<?php } ?>
+        	<td width="14%" align="left" bgcolor="#D0D0D0"><strong>Situa&ccedil;&atilde;o</strong></td>
+        	<td width="17%" align="center" bgcolor="#D0D0D0"><strong>Iniciada em</strong></td>
+        	<td width="15%" align="center" bgcolor="#D0D0D0"><strong> Finalizada em</strong></td>
+      </tr> 
+      
+	<?php if($codFluxo!=$row_sql['bbh_flu_codigo']){ ?>
+      <tr>
+        <td height="25" colspan="4" align="left" bgcolor="#E7E7E7" style="border-bottom:solid 1px #666"><strong>::&nbsp;<?php echo converte($a = $row_sql['bbh_flu_titulo']); ?></strong></td>
+   	  </tr> 
+      <?php } 
+	  //if($codAtivi!=$row_sql['bbh_ati_codigo']){ ?>
+	<tr style="background:#<?php $i++; echo ( ($i%2) == 0 )?'ffffff':'ffffff' ;?>">      
+      <td width="54%" height="30" align="left" <?php echo $colspan; ?>>
+		&nbsp;
+		<?php 
+		
+		echo $a = $row_sql['bbh_mod_ati_nome']; 
+		?>
+        
+        </td>
+        <?php if(!isset($naoMostra)) {?>
+	  <?php } ?>
+	  <td width="14%" align="left" ><?php echo $a = $row_sql['bbh_sta_ati_nome']; ?></td>
+   	  <td width="17%" align="center" ><?php 
+				if(!empty($row_sql['bbh_ati_inicio_real'])){
+					echo $a=arrumadata($row_sql['bbh_ati_inicio_real']);
+				} else {
+					echo "<div color:#F00'><span style='font-size:9px'>Início Previsto</span></div>";
+					echo "<label style='color:#F00'>&nbsp;".arrumadata($row_sql['bbh_ati_inicio_previsto'])."</label>";			
+				}
+		?></td>
+		<td width="15%" align="center" ><?php 
+				if(!empty($row_sql['bbh_ati_final_real'])){
+					echo $a=arrumadata($row_sql['bbh_ati_final_real']);
+				} else {
+					echo "<div color:#F00'><span style='font-size:9px'>Final previsto</span></div>";	
+					echo "<label style='color:#F00'>&nbsp;".arrumadata($row_sql['bbh_ati_final_previsto'])."</label>";				
+				}
+		?></td>
+      </tr>
+      <?php //} ?>
+<?php
+$codFluxo = $row_sql['bbh_flu_codigo']; 
+}?>
+
+    
+    </table>
+<br>
+<table width="777" border="0" align="center" cellpadding="0" cellspacing="0" class="verdana_12">
+  <tr>
+    <td height="25" align="right"><strong>13/03/2011 10:02</strong></td>
+  </tr>
+</table>

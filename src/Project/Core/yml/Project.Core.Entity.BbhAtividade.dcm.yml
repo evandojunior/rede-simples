@@ -1,0 +1,125 @@
+Project\Core\Entity\BbhAtividade:
+    type: entity
+    table: bbh_atividade
+    indexes:
+        bbh_atividade_bbh_mod_atividade:
+            columns:
+                - bbh_mod_ati_codigo
+        bbh_atividade_bbh_fluxo:
+            columns:
+                - bbh_flu_codigo
+        bbh_atividade_bbh_status_atividade:
+            columns:
+                - bbh_sta_ati_codigo
+        bbh_usu_codigo:
+            columns:
+                - bbh_usu_codigo
+        bbh_flu_alt_codigo:
+            columns:
+                - bbh_flu_alt_codigo
+        bbh_alternativa_fluxo:
+            columns:
+                - bbh_alternativa_fluxo
+    id:
+        bbhAtiCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_ati_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhAtiObservacao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_ati_observacao
+        bbhAtiInicioPrevisto:
+            type: date
+            nullable: true
+            column: bbh_ati_inicio_previsto
+        bbhAtiFinalPrevisto:
+            type: date
+            nullable: true
+            column: bbh_ati_final_previsto
+        bbhAtiInicioReal:
+            type: date
+            nullable: true
+            column: bbh_ati_inicio_real
+        bbhAtiFinalReal:
+            type: date
+            nullable: true
+            column: bbh_ati_final_real
+        bbhAtiAndamento:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_ati_andamento
+    manyToOne:
+        bbhAlternativaFluxo:
+            targetEntity: BbhFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_alternativa_fluxo:
+                    referencedColumnName: bbh_flu_codigo
+            orphanRemoval: false
+        bbhFluCodigo:
+            targetEntity: BbhFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_flu_codigo:
+                    referencedColumnName: bbh_flu_codigo
+            orphanRemoval: false
+        bbhModAtiCodigo:
+            targetEntity: BbhModeloAtividade
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_mod_ati_codigo:
+                    referencedColumnName: bbh_mod_ati_codigo
+            orphanRemoval: false
+        bbhStaAtiCodigo:
+            targetEntity: BbhStatusAtividade
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_sta_ati_codigo:
+                    referencedColumnName: bbh_sta_ati_codigo
+            orphanRemoval: false
+        bbhFluAltCodigo:
+            targetEntity: BbhFluxoAlternativa
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_flu_alt_codigo:
+                    referencedColumnName: bbh_flu_alt_codigo
+            orphanRemoval: false
+        bbhUsuCodigo:
+            targetEntity: BbhUsuario
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_usu_codigo:
+                    referencedColumnName: bbh_usu_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,95 @@
+Project\Core\Entity\BbhParagrafo:
+    type: entity
+    table: bbh_paragrafo
+    indexes:
+        bbh_relatorio:
+            columns:
+                - bbh_rel_codigo
+    id:
+        bbhParCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_par_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhParTitulo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_par_titulo
+        bbhParParagrafo:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_par_paragrafo
+        bbhModParCodigo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_mod_par_codigo
+        bbhParOrdem:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_par_ordem
+        bbhParMomento:
+            type: date
+            nullable: true
+            column: bbh_par_momento
+        bbhParAutor:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: bbh_par_autor
+        bbhParArquivo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_par_arquivo
+        bbhParNmarquivo:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: bbh_par_nmArquivo
+        bbhParLegenda:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_par_legenda
+        bbhParTipoAnexo:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: bbh_par_tipo_anexo
+    manyToOne:
+        bbhRelCodigo:
+            targetEntity: BbhRelatorio
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_rel_codigo:
+                    referencedColumnName: bbh_rel_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

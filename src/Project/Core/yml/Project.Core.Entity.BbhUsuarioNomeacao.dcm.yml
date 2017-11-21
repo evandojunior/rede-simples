@@ -1,0 +1,42 @@
+Project\Core\Entity\BbhUsuarioNomeacao:
+    type: entity
+    table: bbh_usuario_nomeacao
+    indexes:
+        bbh_usu_codigo_bbh_usuario:
+            columns:
+                - bbh_usu_codigo
+        bbh_per_codigo_bbh_perfil:
+            columns:
+                - bbh_per_codigo
+    id:
+        bbhUsuPerCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_usu_per_codigo
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        bbhPerCodigo:
+            targetEntity: BbhPerfil
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_per_codigo:
+                    referencedColumnName: bbh_per_codigo
+            orphanRemoval: false
+        bbhUsuCodigo:
+            targetEntity: BbhUsuario
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_usu_codigo:
+                    referencedColumnName: bbh_usu_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

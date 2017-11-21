@@ -1,0 +1,580 @@
+@charset "iso-8859-1";
+body {
+	background: URL('/datafiles/servicos/policy/sistema/e-solution/background.jpg') fixed no-repeat center bottom;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+.alin_Tempo{
+	float:right;
+	margin-top:-20px;
+}
+
+.barra{
+	border-bottom:#CCCCCC dashed 1px;
+}
+
+.color{
+	color:#0066CC;
+}
+.verdana_9 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 9px; 
+	text-decoration: none;
+}
+
+.verdana_10 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10px; 
+	text-decoration: none; 
+	letter-spacing: -1px;
+}
+
+.verdana_11 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	text-decoration: none; 
+	letter-spacing: -1px;
+}
+
+.verdana_11_bold { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	text-decoration: none; 
+	letter-spacing: -1px;
+	font-weight:bold;
+}
+.verdana_11_cinza {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#666666;
+	text-decoration:none;
+	letter-spacing: -1px;
+}
+
+.verdana_11_verde {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	text-decoration: none; 
+	letter-spacing: -1px;
+	color:#006600;
+}
+
+.verdana_11_vermelho { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	text-decoration: none; 
+	letter-spacing: -1px;
+	color:#FF0000;
+}
+
+.console { 
+	font-family: "Lucida Console"; 
+	font-size: 11px; 
+	text-decoration: none; 
+}
+
+.verdana_12 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	text-decoration: none;
+}
+
+.verdana_13 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 13px; 
+	text-decoration: none;
+}
+
+.aviso{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	text-decoration: none;
+	color:#FF0000;
+}
+
+a:link {
+	text-decoration: none;
+	color: #333333;
+}
+
+a:active {  
+	color: #000000; 
+	text-decoration: underline;
+}
+
+a:visited {  
+	color: #333333; 
+	text-decoration: none;
+}
+
+a:hover {  
+	color: #000000; 
+	text-decoration: none;
+}
+
+.button {
+	border: 1px #333333 solid;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	letter-spacing: normal;
+	text-decoration: none;
+	margin-top: 1px;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	margin-left: 1px;
+	line-height: normal;
+	list-style-type: lower-alpha;
+}
+
+.titulo_setor {  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 11px; text-decoration: none; 
+	letter-spacing: normal; 
+	/*cursor: hand; */
+	border-color: black black #003399 #003399; 
+	border-style: solid; 
+	border-top-width: 0px; 
+	border-right-width: 0px; 
+	border-bottom-width: 1px; 
+	border-left-width: 0px; 
+	font-weight: bold;
+}
+
+.textareas { 
+	border: 1px solid; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10px; 
+	color: #000000; 
+	letter-spacing: 0px; 
+	text-decoration: none; 
+	margin-top: 1px; 
+	margin-right: 1px; 
+	margin-bottom: 1px; 
+	margin-left: 1px; 
+	line-height: normal; 
+	list-style-type: lower-alpha; 
+	border-color: #333333 #CCCCCC #CCCCCC #333333;
+}
+
+.verdana_xx-small {
+	font-family: verdana; 
+	font-size: xx-small;
+}
+
+.arial_12 { 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 13px; 
+	letter-spacing: normal;
+}
+
+.arial_11 { 
+	font-family: Arial; 
+	font-size: 11px; 
+	letter-spacing: normal;
+}
+
+.titPG {  
+	font-family: Verdana; 
+	font-size: 18px; 
+	font-style: normal; 
+	letter-spacing: normal; 
+	line-height: normal; 
+	border-color: black black #0066CC; 
+	margin-top: 0px; 
+	margin-right: 0px; 
+	margin-bottom: 0px; 
+	margin-left: 0px; 
+	padding-top: 0px; 
+	padding-right: 0px; 
+	padding-bottom: 0px; 
+	padding-left: 0px; 
+	border-style: solid; 
+	border-top-width: 0px; 
+	border-right-width: 0px; 
+	border-bottom-width: 1px; 
+	border-left-width: 0px;
+}
+
+.borderAll {  
+	border: 1px #003399 solid;
+}
+
+.borderAlljanela {  
+	border-color: #E1E1E1 #333333 #333333 #E1E1E1; 
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px;
+}
+
+.verdana16 {
+	font-family: Verdana;
+	font-size: 16px;
+}
+
+.verdana18 {
+	font-family: Verdana;
+	font-size: 18px;
+}
+
+.fundo_Ponto {
+	background-image: url(/images/fundo_ponto.gif);
+	background-repeat: repeat;
+}
+
+.Fundo-TabelaHome {
+	background-color: #FFFFFF;
+	height: 100%;
+	width: 777px;
+	background-position: center;
+	margin: 0px;
+	padding: 0px;
+
+
+}
+
+.Fundo-Direita {
+	background-image: url(/images/fundo_direita.gif);
+	background-repeat: repeat;
+}
+
+.Fundo-Esquerda {
+	background-image: url(/images/fundo_esquerda.gif);
+}
+
+.Fundo-Bottom {
+	background-image: url(/images/fundo_bottom.gif);
+	background-repeat: repeat;
+}
+
+.MensBottom {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	letter-spacing: normal;
+	word-spacing: normal;
+}
+
+.ItemMenu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.fundo {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #E1E1E1;
+	border-right-color: #333333;
+	border-bottom-color: #333333;
+	border-left-color: #E1E1E1;
+}
+
+.back_input{
+	background-color:#FAFAFA; 
+	border-color: #D0D5DA; 
+	border-style: solid; 
+	border-width : 1px; 
+	font-size: 11px; 
+	color:#003366; 
+	font-family: Verdana;
+
+}
+
+.back_Campos{
+	background-color:#FAFAFA; 
+	border-color: #D0D5DA; 
+	border-style: solid; 
+	border-width : 1px; 
+	font-size: 11px; 
+	color:#003366; 
+	font-family: Verdana;
+	cursor:text;
+	height:14px;
+}
+
+/*Menu*/
+#horizontal{
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-family:Verdana;
+	font-size:11px;
+}
+#horizontal li{
+	 float:left;
+	 width:80px;
+}
+#horizontal li a{
+	color:#000000;
+	display:block;
+	text-decoration:none;
+	margin-top:-14px;
+	margin-left:27px;
+}
+
+#ferramentas {
+	float:right;
+	margin-top:5px;
+	font-family:Verdana;
+	font-size:11px;	
+}
+/*Fim do Menu*/
+
+
+.back_input{
+	background-color:#FAFAFA; 
+	border-color: #D0D5DA; 
+	border-style: solid; 
+	border-width : 1px; 
+	font-size: 11px; 
+	color:#003366; 
+	font-family: Verdana
+}
+
+.formulario2 {font-family: Verdana;
+	font-size: 10px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #B4C2CB;
+	overflow: auto;
+	scrollbar-face-color: #B4C2CB;
+	scrollbar-highlight-color:#FFFFFF;
+	scrollbar-3dlight-color:#FFFFFF;
+	scrollbar-darkshadow-color:#FFFFFF;
+	scrollbar-shadow-color:#FFFFFF;
+	scrollbar-arrow-color:#FFFFFF;
+	scrollbar-track-color:#FFFFFF;
+}
+
+.barraRolagem{
+	scrollbar-face-color: #B4C6DB;
+	scrollbar-highlight-color:#FFFFFF;
+	scrollbar-3dlight-color:#FFFFFF;
+	scrollbar-darkshadow-color:#FFFFFF;
+	scrollbar-shadow-color:#FFFFFF;
+	scrollbar-arrow-color:#FFFFFF;
+	scrollbar-track-color:#FFFFFF;
+}
+
+.hide{display:none;}
+.show{display:block;}
+
+.login{
+	border:#C3D9FF solid 1px;
+	width:283px;
+	background:#FFFFFF;
+	height:110px;
+}
+.comum{
+	background:#ffffff;
+	cursor:pointer;
+}
+.ativo{
+	background:#E9EDEC;
+	cursor:pointer;
+}
+
+/* Estilo que será usado confecção no cabeçalho do sistema*/
+.cabecalho_topo{
+	background:url(/datafiles/servicos/policy/sistema/e-solution/cabecalho.jpg);
+	width:777px;
+	height:130px;
+}
+/* Fim do cabeçalho*/
+
+
+/* Estilo que será usado na confecção do menu horizontal do sistema*/
+#menu {
+	position:relative;
+	width:777;
+	height:32px;
+	/*background-color:#CCCCCC;*/
+	background:url(/e-solution/servicos/policy/images/menu_horizontal.jpg);
+	background-repeat:repeat-x;
+
+}
+
+
+/* Menu UL/LI Display/Format */
+#menu ul { 
+	margin:0px auto;
+}
+
+#menu ul li { 
+	display: inline; 
+}
+
+
+#menu li a:link, li a:visited {
+	position:relative;
+	float:left;	
+	text-decoration:none;
+	color: #365634;
+	font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	list-style-type: none;
+	padding:0 15px;
+	height:30px;
+	line-height:30px;	
+	background:url(/e-solution/servicos/policy/images/menu_horizontal.jpg);
+}
+
+
+#menu li a:active {
+	position:relative;
+	color:#365634;
+	background:url(/e-solution/servicos/policy/images/menu_horizontal.jpg);
+	background-repeat:repeat-x;
+}
+
+#menu li a:hover {
+	float:left;	
+	text-decoration:none;
+	color: #365634;
+
+	font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	list-style-type: none;
+	background:url(/e-solution/servicos/policy/images/barra_ativa.jpg);
+	background-repeat:repeat-x;
+	
+	padding:0 15px;
+}
+/*.Fim do menu horizontal*/
+
+.botao_calendar{
+background:url(/e-solution/servicos/policy/images/calendar.gif);
+background-repeat:no-repeat;
+background-position:bottom;
+cursor:pointer;
+margin-left:-5px;
+
+
+border:0;
+}
+
+.listagem_auditoria{
+	border:1px solid #EAE9E3;
+	margin-left:10px;
+	margin-right:10px;	
+	margin-top:20px;
+	
+}
+
+.ferramentasUsuarioON{
+	background:url(/e-solution/servicos/policy/images/quadrado_off.gif);
+	background-repeat:no-repeat;
+	height:84px;
+	width:154px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	padding-top:5px;
+	
+}
+
+.ferramentasUsuarioOFF{
+	background:url(/e-solution/servicos/policy/images/quadrado_on.gif);
+	background-repeat:no-repeat;
+	height:84px;
+	width:154px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	padding-top:5px;
+}
+/* TOOLTIP NORMAL */
+
+.verdana_9 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 9px; 
+	text-decoration: none;
+}
+
+a.tipnormal{
+    position:relative;
+	color:#CCCCCC;
+    z-index:24;
+    text-decoration:none;
+	font-weight:bold;
+}
+
+a.tipnormal:hover{
+    z-index:25; 
+	background:transparent; /* precisa do background para funcionar o Internet Explorer */
+	color: #CCCCCC;
+}
+
+a.tipnormal span{display: none;}
+
+a.tipnormal:hover span{
+    display:block;
+    position:absolute;
+	padding: 1px;
+    top: 25px; 
+	left: 10px; 
+	width:200px;
+    border:1px solid #000;
+    background-color:#FAFAD2; 
+	color:#CCCCCC;
+    text-align: center;}
+
+/* TOOLTIP COM BALAO */
+a.tipbalao{
+    position:relative;
+    z-index:24;
+
+	font-weight:bold;
+    text-decoration:none;
+}
+a.tipbalao span{ display: none; }
+a.tipbalao:hover{ z-index:25; color: #000000; background:;}
+a.tipbalao:hover span.tooltip{
+    display:block;
+    position:absolute;
+    top:17px; left:55px;
+	padding: 15px 0 0 0;
+	width:200px;
+
+    text-align: center;
+}
+a.tipbalao:hover span.topo{
+	display: block;
+	padding: 30px 8px 0;
+    background: url(/e-solution/servicos/policy/images/bubble.gif) no-repeat top;
+}
+a.tipbalao:hover span.meio{
+	display: block;
+	padding: 0 8px; 
+	background: url(/e-solution/servicos/policy/images/bubble_filler.gif) repeat bottom; 
+}
+a.tipbalao:hover span.base{
+	display: block;
+	padding:3px 8px 10px;
+	color: #CCCCCC;
+    background: url(/e-solution/servicos/policy/images/bubble.gif) no-repeat bottom;
+}
+	
+/* Fim do estilo do tolltip */
+
+.blocoON{
+	background:url(/e-solution/servicos/policy/images/calendarioescuro.gif);
+	background-repeat:no-repeat;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;	
+}
+.blocoOFF{
+	background:url(/e-solution/servicos/policy/images/calendarioclaro.gif);
+	background-repeat:no-repeat;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;	
+}

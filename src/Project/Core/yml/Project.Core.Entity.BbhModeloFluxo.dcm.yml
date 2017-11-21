@@ -1,0 +1,52 @@
+Project\Core\Entity\BbhModeloFluxo:
+    type: entity
+    table: bbh_modelo_fluxo
+    indexes:
+        bbh_modelo_fluxo_bbh_tipo_fluxo:
+            columns:
+                - bbh_tip_flu_codigo
+    id:
+        bbhModFluCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_mod_flu_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhModFluNome:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_mod_flu_nome
+        bbhModFluObservacao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_mod_flu_observacao
+        bbhModFluSub:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_mod_flu_sub
+    manyToOne:
+        bbhTipFluCodigo:
+            targetEntity: BbhTipoFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_tip_flu_codigo:
+                    referencedColumnName: bbh_tip_flu_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,1 @@
+java -jar sdk-local-install.jar http://localhost:8080/sdk-web/ 1.5.1.07 NlnDrB5shJGZkk+4pGJDo9ZRrM4=

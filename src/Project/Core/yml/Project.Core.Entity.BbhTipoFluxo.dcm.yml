@@ -1,0 +1,42 @@
+Project\Core\Entity\BbhTipoFluxo:
+    type: entity
+    table: bbh_tipo_fluxo
+    id:
+        bbhTipFluCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_tip_flu_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhTipFluIdentificacao:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_tip_flu_identificacao
+        bbhTipFluNome:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_tip_flu_nome
+        bbhTipFluCodigoPai:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_tip_flu_codigo_pai
+        bbhTipFluObservacao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_tip_flu_observacao
+    lifecycleCallbacks: {  }

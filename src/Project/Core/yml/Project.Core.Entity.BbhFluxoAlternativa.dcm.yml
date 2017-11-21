@@ -1,0 +1,77 @@
+Project\Core\Entity\BbhFluxoAlternativa:
+    type: entity
+    table: bbh_fluxo_alternativa
+    indexes:
+        bbh_fluxo_alternativa_bbh_modelo_tarefa:
+            columns:
+                - bbh_mod_ati_codigo
+        bbh_mod_flu_codigo:
+            columns:
+                - bbh_mod_flu_codigo
+    id:
+        bbhFluAltCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_flu_alt_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhFluAltTitulo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_flu_alt_titulo
+        bbhFluObservacao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_flu_observacao
+        bbhAtividadePredileta:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_atividade_predileta
+        bbhFluAltIcone:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+                default: 4.gif
+            column: bbh_flu_alt_icone
+        bbhModAtiOrdem:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_mod_ati_ordem
+    manyToOne:
+        bbhModAtiCodigo:
+            targetEntity: BbhModeloAtividade
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_mod_ati_codigo:
+                    referencedColumnName: bbh_mod_ati_codigo
+            orphanRemoval: false
+        bbhModFluCodigo:
+            targetEntity: BbhModeloFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_mod_flu_codigo:
+                    referencedColumnName: bbh_mod_flu_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,77 @@
+Project\Core\Entity\BbhModeloParagrafo:
+    type: entity
+    table: bbh_modelo_paragrafo
+    indexes:
+        bbh_mod_flu_codigo_paragrafo:
+            columns:
+                - bbh_mod_flu_codigo
+    id:
+        bbhModParCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_mod_par_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhModParNome:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_mod_par_nome
+        bbhModParTitulo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_mod_par_titulo
+        bbhModParParagrafo:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_mod_par_paragrafo
+        bbhModParPrivado:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_mod_par_privado
+        bbhUsuAutor:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_usu_autor
+        bbhAdmCodigo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_adm_codigo
+        bbhModParMomento:
+            type: datetime
+            nullable: true
+            options:
+                default: '0000-00-00 00:00:00'
+            column: bbh_mod_par_momento
+    manyToOne:
+        bbhModFluCodigo:
+            targetEntity: BbhModeloFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_mod_flu_codigo:
+                    referencedColumnName: bbh_mod_flu_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

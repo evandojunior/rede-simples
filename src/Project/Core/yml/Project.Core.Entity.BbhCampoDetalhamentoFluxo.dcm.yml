@@ -1,0 +1,113 @@
+Project\Core\Entity\BbhCampoDetalhamentoFluxo:
+    type: entity
+    table: bbh_campo_detalhamento_fluxo
+    repositoryClass: Project\Core\Repository\BBHive\BbhCampoDetalhamentoFluxoRepository
+    indexes:
+        bbh_campo_detalhamento_fluxo_bbh_detalhamento_fluxo_:
+            columns:
+                - bbh_det_flu_codigo
+    id:
+        bbhCamDetFluCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_cam_det_flu_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhCamDetFluNome:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_det_flu_nome
+        bbhCamDetFluTitulo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_det_flu_titulo
+        bbhCamDetFluTipo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_det_flu_tipo
+        bbhCamDetFluCuringa:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_det_flu_curinga
+        bbhCamDetFluDescricao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_cam_det_flu_descricao
+        bbhCamDetFluTamanho:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_det_flu_tamanho
+        bbhCamDetFluDefault:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_cam_det_flu_default
+        bbhCamDetFluDisponivel:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: '1'
+            column: bbh_cam_det_flu_disponivel
+        bbhCamDetFluPreencherInicio:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: '1'
+            column: bbh_cam_det_flu_preencher_inicio
+        bbhCamDetFluObrigatorio:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: '1'
+            column: bbh_cam_det_flu_obrigatorio
+    manyToOne:
+        bbhDetFluCodigo:
+            targetEntity: BbhDetalhamentoFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_det_flu_codigo:
+                    referencedColumnName: bbh_det_flu_codigo
+            orphanRemoval: false
+    manyToMany:
+        bbhModAtiCodigo:
+            targetEntity: BbhModeloAtividade
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: bbhCamDetFluCodigo
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

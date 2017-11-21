@@ -1,0 +1,29 @@
+Project\Core\Entity\BbhDepartamento:
+    type: entity
+    table: bbh_departamento
+    id:
+        bbhDepCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_dep_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhDepNome:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: bbh_dep_nome
+        bbhDepObs:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_dep_obs
+    lifecycleCallbacks: {  }

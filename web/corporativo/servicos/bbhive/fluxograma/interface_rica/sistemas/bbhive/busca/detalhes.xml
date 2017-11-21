@@ -1,0 +1,10 @@
+<atividade_fluxo id="54" fluxo="0">
+ 	<detalhes tag="Título do fluxo:" valor="Fluxo Normal 01/2009" publicado="1" />
+ 	<detalhes tag="Título da Atividade:" valor="Atividade 1" publicado="1" />
+ 	<detalhes tag="Início previsto:" valor="01/09/2009" publicado="1" />
+ 	<detalhes tag="Início real:" valor="02/09/2009" publicado="1" />
+ 	<detalhes tag="Departamento:" valor="Criminalística" publicado="1" />
+ 	<detalhes tag="Profissional:" valor="Robson Cruz" publicado="1" />
+ 	<detalhes tag="Status" valor="35%" publicado="1" />
+ 	<detalhes tag="Descrição" valor="Verificar pó de café; Adicionar a cafeteira;" publicado="1" />
+ </atividade_fluxo>

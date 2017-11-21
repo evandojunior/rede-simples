@@ -1,0 +1,42 @@
+Project\Core\Entity\BbpAdmLockAplicacao:
+    type: entity
+    table: bbp_adm_lock_aplicacao
+    indexes:
+        bbp_adm_loc_codigo:
+            columns:
+                - bbp_adm_loc_codigo
+        bbp_adm_apl_codigo:
+            columns:
+                - bbp_adm_apl_codigo
+    id:
+        bbpAdmLockCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbp_adm_lock_codigo
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        bbpAdmAplCodigo:
+            targetEntity: BbpAdmAplicacao
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbp_adm_apl_codigo:
+                    referencedColumnName: bbp_adm_apl_codigo
+            orphanRemoval: false
+        bbpAdmLocCodigo:
+            targetEntity: BbpAdmLock
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbp_adm_loc_codigo:
+                    referencedColumnName: bbp_adm_loc_codigo
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

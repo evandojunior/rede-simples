@@ -1,0 +1,4 @@
+<menu_padrao>
+	<aba id="1" nome="Croqui" acaoMenu="loadCroqui()" titulo="Croqui - Blackbee" 	padrao="0"/>
+	<aba id="2" nome="BBHive" acaoMenu="loadBBHive()"	titulo="Gerenciamento de fluxos" 	padrao="1"/>
+</menu_padrao>

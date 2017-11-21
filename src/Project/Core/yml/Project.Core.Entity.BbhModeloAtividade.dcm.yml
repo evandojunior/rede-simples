@@ -1,0 +1,138 @@
+Project\Core\Entity\BbhModeloAtividade:
+    type: entity
+    table: bbh_modelo_atividade
+    indexes:
+        modelo_fluxo_modelo_atividade:
+            columns:
+                - bbh_mod_flu_codigo
+        bbh_per_codigo:
+            columns:
+                - bbh_per_codigo
+    id:
+        bbhModAtiCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbh_mod_ati_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbhModAtiNome:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbh_mod_ati_nome
+        bbhModAtiObservacao:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_mod_ati_observacao
+        bbhModAtiDuracao:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_mod_ati_duracao
+        bbhModAtiInicio:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_mod_ati_inicio
+        bbhModAtiOrdem:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_mod_ati_ordem
+        bbhModAtiAtribuicao:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbh_mod_ati_atribuicao
+        bbhModAtiMecanismo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '0'
+            column: bbh_mod_ati_mecanismo
+        bbhModAtiIcone:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+                default: 3.gif
+            column: bbh_mod_ati_icone
+        bbhModAtiinicio:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: false
+                default: '0'
+            column: bbh_mod_atiInicio
+        bbhModAtifim:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: false
+                default: '0'
+            column: bbh_mod_atiFim
+        bbhModAtiRelatorio:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+            column: bbh_mod_ati_relatorio
+    manyToOne:
+        bbhPerCodigo:
+            targetEntity: BbhPerfil
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_per_codigo:
+                    referencedColumnName: bbh_per_codigo
+            orphanRemoval: false
+        bbhModFluCodigo:
+            targetEntity: BbhModeloFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                bbh_mod_flu_codigo:
+                    referencedColumnName: bbh_mod_flu_codigo
+            orphanRemoval: false
+    manyToMany:
+        bbhCamDetFluCodigo:
+            targetEntity: BbhCampoDetalhamentoFluxo
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: bbhModAtiCodigo
+            joinTable:
+                name: bbh_campo_detalhamento_atividade
+                joinColumns:
+                    -
+                        name: bbh_mod_ati_codigo
+                        referencedColumnName: bbh_mod_ati_codigo
+                inverseJoinColumns:
+                    -
+                        name: bbh_cam_det_flu_codigo
+                        referencedColumnName: bbh_cam_det_flu_codigo
+            orderBy: null
+    lifecycleCallbacks: {  }

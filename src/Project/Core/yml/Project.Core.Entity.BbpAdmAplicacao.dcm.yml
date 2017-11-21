@@ -1,0 +1,58 @@
+Project\Core\Entity\BbpAdmAplicacao:
+    type: entity
+    table: bbp_adm_aplicacao
+    id:
+        bbpAdmAplCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbp_adm_apl_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbpAdmAplNome:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: bbp_adm_apl_nome
+        bbpAdmAplApelido:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: bbp_adm_apl_apelido
+        bbpAdmAplObservacao:
+            type: blob
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbp_adm_apl_observacao
+        bbpAdmAplUrl:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: bbp_adm_apl_url
+        bbpAdmAplAtivo:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+                default: '1'
+            column: bbp_adm_apl_ativo
+        bbpAdmAplIcone:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: bbp_adm_apl_icone
+    lifecycleCallbacks: {  }

@@ -1,0 +1,62 @@
+Project\Core\Entity\BbpAdmLockBiometria:
+    type: entity
+    table: bbp_adm_lock_biometria
+    id:
+        bbpAdmLockBioCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbp_adm_lock_bio_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbpAdmLockBioNome:
+            type: string
+            nullable: true
+            length: 75
+            options:
+                fixed: false
+            column: bbp_adm_lock_bio_nome
+        bbpAdmLockBioEmail:
+            type: string
+            nullable: true
+            length: 75
+            options:
+                fixed: false
+            column: bbp_adm_lock_bio_email
+        bbpAdmLockBioChave:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbp_adm_lock_bio_chave
+        bbpAdmLockBioObs:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbp_adm_lock_bio_obs
+        bbpAdmLockBioAcesso:
+            type: datetime
+            nullable: true
+            options:
+                default: '0000-00-00 00:00:00'
+            column: bbp_adm_lock_bio_acesso
+        bbhAdmLockBioImagem:
+            type: blob
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbh_adm_lock_bio_imagem
+        bbpAdmLocCodigo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: bbp_adm_loc_codigo
+    lifecycleCallbacks: {  }

@@ -1,0 +1,29 @@
+Project\Core\Entity\BbpAdmLockFirewall:
+    type: entity
+    table: bbp_adm_lock_firewall
+    id:
+        bbpAdmLockFirCodigo:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: bbp_adm_lock_fir_codigo
+            generator:
+                strategy: IDENTITY
+    fields:
+        bbpAdmLockFirIp:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: bbp_adm_lock_fir_ip
+        bbpAdmLockFirObs:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: bbp_adm_lock_fir_obs
+    lifecycleCallbacks: {  }

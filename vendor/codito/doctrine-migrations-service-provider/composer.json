@@ -1,0 +1,33 @@
+{
+    "name": "codito/doctrine-migrations-service-provider",
+    "type": "library",
+    "description": "Doctrine Migrations service provider for Silex applications",
+    "keywords": [ "silex", "doctrine", "migrations", "schema", "DBAL" ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Grzegorz Korba",
+            "email": "grzegorz.korba@codito.net",
+            "homepage": "http://codito.net"
+        }
+    ],
+    "support": {
+        "email": "support@codito.net"
+    },
+    "require": {
+        "php": ">=5.4",
+        "codito/silex-console-provider": "~2.0",
+        "doctrine/migrations": "~1.0"
+    },
+    "require-dev": {
+        "silex/silex": "~2.0"
+    },
+    "suggest": {
+        "dflydev/doctrine-orm-service-provider": "Required for using migrations:diff command (Generating migration files based on database existing schema and current entities definition)"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codito\\Silex\\DoctrineMigrationsService\\": ""
+        }
+    }
+}

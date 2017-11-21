@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<nivel_informacao>
+	<informacao nivel="-1" valor="Sem Acesso" />
+	<informacao nivel="0" valor="Ostensivo" />
+	<informacao nivel="1" valor="Reservado" />
+	<informacao nivel="2" valor="Confidencial" />
+	<informacao nivel="3" valor="Secreto" />
+	<informacao nivel="4" valor="Ultra Secreto" />
+</nivel_informacao>

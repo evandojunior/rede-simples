@@ -1,0 +1,26 @@
+<linha>
+
+<campo nome="bbh_pro_titulo" titulo="Título" default="" tipo="texto_simple" tamanho="40" obrigatorio="1" unico="0" larguraTitulo="150" larguraCampo="200" mesmaLinha="0" exibeCampo="1" valor="" chavePrimaria="0" />
+
+<campo nome="bbh_pro_identificacao" titulo="Identificação" default="" tipo="texto_simple" tamanho="40" obrigatorio="0" unico="0" larguraTitulo="150" larguraCampo="200" mesmaLinha="1" exibeCampo="0" valor="" chavePrimaria="0" />
+
+</linha>
+
+<linha>
+<campo nome="bbh_pro_email" titulo="E-mail" default="" tipo="texto_simple" tamanho="35" obrigatorio="1" unico="0" larguraTitulo="150" larguraCampo="200" mesmaLinha="0" exibeCampo="1" valor="" chavePrimaria="0" />
+
+<campo nome="bbh_pro_flagrante" titulo="Flagrante" default="" tipo="lista_opcoes_dinamica" tamanho="0" obrigatorio="0" unico="0" larguraTitulo="130" larguraCampo="50" mesmaLinha="1" exibeCampo="1" valor="" chavePrimaria="0">	
+	<e id="1" label="Sim" />
+	<e id="0" label="Não" />
+</campo>
+</linha>
+
+<linha>
+<campo nome="bbh_pro_momento" titulo="Momento" default="" tipo="time_stamp" tamanho="0" obrigatorio="0" unico="0" larguraTitulo="150" larguraCampo="150" mesmaLinha="0" exibeCampo="1" valor="" chavePrimaria="0" />
+
+<campo nome="bbh_pro_data" titulo="Data do ofício" default="" tipo="data" tamanho="0" obrigatorio="0" unico="0" larguraTitulo="150" larguraCampo="200" mesmaLinha="1" exibeCampo="1" valor="" chavePrimaria="0" />
+</linha>
+
+<linha>
+<campo nome="bbh_pro_descricao" titulo="Descrição" default="" tipo="texto_longo" tamanho="90|5" obrigatorio="0" unico="0" larguraTitulo="150" larguraCampo="350" mesmaLinha="0" exibeCampo="1" valor="" chavePrimaria="0" />
+</linha>
